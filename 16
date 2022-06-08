@@ -1,0 +1,9 @@
+proc File_Copy {src dest}
+{
+set in [open $src]
+set out [open $dest w]
+puts -nonewline $out [read $in]
+close $out
+close $in+
+}
+puts [File_Copy file1.txt file2.txt]
