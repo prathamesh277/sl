@@ -1,0 +1,18 @@
+h={}
+puts "Enter no of subj"
+nsubj=gets.chomp.to_i
+while nsubj>0
+	puts "Enter subj name:"
+	key=gets.chomp
+	puts "Enter marks:"
+	val=gets.chomp.to_i
+	h.store(key,val)
+	nsubj-=1
+	end
+puts h
+sum=0
+h.each_value do |i|
+	puts i
+	sum+=i
+	end
+puts sum
