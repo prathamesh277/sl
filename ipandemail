@@ -1,11 +1,18 @@
-chomp($ip=<stdin>);
-if($ip =~ /(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/)
+print("What is the IP Address you A would like to validate: ");
+chomp($ipaddr=<stdin>);
+if ( $ipaddr =~ /(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/)
 {
-	if($1<256 && $2<256 && $3<256 && $4<256){
-		 print "$1 $2 $3 $4";
-	}
-	else{
-		print "Invalid";
-	}
-
+if($1<=255 && $2<=255 && $3<=255 && $4<=255){
+print("valid ip address\n");
+}
+else{
+print("invalid ip address\n");
+}
+}
+chomp $email=<stdin>;
+if($email =~ /[a-z A-Z 0-9]+@[a-z]+.[a-z]+/) {
+print "valid email address";
+}
+else{
+print "invalid email address";
 }
