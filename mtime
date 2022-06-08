@@ -1,0 +1,6 @@
+proc newer { file1 file2 } {
+
+return [expr [file mtime $file1] > [file mtime $file2]]
+
+}
+puts [newer file1.txt file2.txt]
